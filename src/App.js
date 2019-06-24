@@ -1,6 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { getVideoDevices, mediaDeviceSupported } from './components/ReactQuagga/utils'
+
+console.warn(mediaDeviceSupported())
+getVideoDevices().then(devices => console.warn(devices))
 
 function App() {
   return (
