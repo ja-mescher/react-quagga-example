@@ -1,6 +1,8 @@
-export const mediaDeviceSupported = () => {
-  const { mediaDevice } = navigator
-  if(mediaDevice && (typeof mediaDevice.getUserMedia === 'function')) {
+import { useEffect, useState } from 'react'
+
+const mediaDeviceSupported = () => {
+  const { mediaDevices } = navigator
+  if(mediaDevices && (typeof mediaDevices.getUserMedia === 'function')) {
     return true
   }
   else {
@@ -8,15 +10,64 @@ export const mediaDeviceSupported = () => {
   }
 }
 
-export const getVideoDevices = async () => {
+const getVideoDevices = async () => {
   if(!mediaDeviceSupported()) return []
   const videoDevices = []
-  const devices = await navigator.mediaDevice.enumerateDevices()
+  const devices = await navigator.mediaDevices.enumerateDevices()
   devices.forEach(device => {
     if(device.kind === 'videoinput') {
       videoDevices.push(device)
     }
   })
-  console.warn(videoDevices)
   return videoDevices
+}
+
+export const useQuagga = () => {
+  const [scannerSupported, setScannerSupported] = useState(false)
+
+  useEffect(() => {
+    getVideoDevices()
+      .then(devices => setScannerSupported(devices.length > 0))
+  }, [])
+
+  return scannerSupported
+}
+
+export const DEFAULT_CONFIG = {
+  inputStream : {
+    name : "Live",
+    type : "LiveStream",
+    constraints: {
+    width: 1920,
+    height: 1080,
+    facingMode: "environment",
+    aspectRatio: {min: 1, max: 1},
+  },
+  area: { // defines rectangle of the detection/localization area
+    top: "0%",    // top offset
+    right: "0%",  // right offset
+    left: "0%",   // left offset
+    bottom: "0%"  // bottom offset
+  },
+  singleChannel: false
+  },
+  decoder : {
+    readers : [
+      "code_128_reader"
+    ],
+    debug: {
+        drawBoundingBox: false,
+        showFrequency: false,
+        drawScanline: false,
+        showPattern: false
+    },
+    multiple: false
+  },
+  numOfWorkers: navigator.hardwareConcurrency || 4,
+  frequency: 5,
+  locate: true,
+  locator: {
+    patchSize: "medium",
+    halfSample: true
+  }
 }

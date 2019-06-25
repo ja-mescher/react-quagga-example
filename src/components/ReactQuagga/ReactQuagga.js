@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import quagga from 'quagga'
 import './ReactQuagga.css'
 
+import { DEFAULT_CONFIG } from './utils'
+
 const ReactQuagga = ({
   config,
   onDetected: handleDetected,
@@ -11,10 +13,11 @@ const ReactQuagga = ({
   const quaggaRef = useRef(null)
 
   useEffect(() => {
-    const { inputStream: initAttrs } = config
-    initAttrs['target'] = quaggaRef
+    const activeConfig = config || DEFAULT_CONFIG
+    const { inputStream: initAttrs } = activeConfig
+    initAttrs['target'] = quaggaRef.current
     quagga.init(
-      { ...config, inputStream: initAttrs },
+      { ...activeConfig, inputStream: initAttrs },
       (error) => {
         if(error) {
           console.error(error)
@@ -38,17 +41,16 @@ const ReactQuagga = ({
 
   return (
     <div
-      ref=quaggaRef
+      ref={quaggaRef}
       className="viewport overlay__content"
     />
   )
 }
 
 ReactQuagga.propTypes = {
-  config: PropTypes.object.isRequired,
   onDetected: PropTypes.func.isRequired,
   onProcessed: PropTypes.func,
-
+  config: PropTypes.object,
 };
 
 export default ReactQuagga;

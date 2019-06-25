@@ -1,30 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { getVideoDevices, mediaDeviceSupported } from './components/ReactQuagga/utils'
+import ReactQuagga, { useQuagga } from './components/ReactQuagga'
 
-console.warn(mediaDeviceSupported())
-getVideoDevices().then(devices => console.warn(devices))
+const App = () => {
+  const scannerSupported = useQuagga()
 
-function App() {
+  if(!scannerSupported) return null
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ReactQuagga
+      onDetected={(data) => console.warn(data)}
+    />
+  )
 }
 
 export default App;

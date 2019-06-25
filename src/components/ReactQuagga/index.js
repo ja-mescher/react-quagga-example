@@ -1,1 +1,2 @@
-export default ReactQuagga from './ReactQuagga'
+export { default } from './ReactQuagga'
+export * from './utils'
