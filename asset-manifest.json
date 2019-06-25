@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-quagga-example/static/css/main.c37c1087.chunk.css",
-    "main.js": "/react-quagga-example/static/js/main.89968960.chunk.js",
-    "main.js.map": "/react-quagga-example/static/js/main.89968960.chunk.js.map",
+    "main.css": "/react-quagga-example/static/css/main.a275a5a3.chunk.css",
+    "main.js": "/react-quagga-example/static/js/main.b657a0a1.chunk.js",
+    "main.js.map": "/react-quagga-example/static/js/main.b657a0a1.chunk.js.map",
     "runtime~main.js": "/react-quagga-example/static/js/runtime~main.78c23c62.js",
     "runtime~main.js.map": "/react-quagga-example/static/js/runtime~main.78c23c62.js.map",
     "static/js/2.05e2634d.chunk.js": "/react-quagga-example/static/js/2.05e2634d.chunk.js",
     "static/js/2.05e2634d.chunk.js.map": "/react-quagga-example/static/js/2.05e2634d.chunk.js.map",
     "index.html": "/react-quagga-example/index.html",
-    "precache-manifest.e992ff7961122a416c18ccea54f39db4.js": "/react-quagga-example/precache-manifest.e992ff7961122a416c18ccea54f39db4.js",
+    "precache-manifest.09f7b6c218e0abed1ed983df51450f1b.js": "/react-quagga-example/precache-manifest.09f7b6c218e0abed1ed983df51450f1b.js",
     "service-worker.js": "/react-quagga-example/service-worker.js",
-    "static/css/main.c37c1087.chunk.css.map": "/react-quagga-example/static/css/main.c37c1087.chunk.css.map"
+    "static/css/main.a275a5a3.chunk.css.map": "/react-quagga-example/static/css/main.a275a5a3.chunk.css.map"
   }
 }
