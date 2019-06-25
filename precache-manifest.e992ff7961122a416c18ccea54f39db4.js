@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7dc23b18d52531ec3458f710eb54890d",
+    "revision": "46cd8cec320eec7dded1304ac4943fce",
     "url": "/react-quagga-example/index.html"
   },
   {
-    "revision": "89b63d93d7dbe66ec22a",
-    "url": "/react-quagga-example/static/css/main.677b4c2f.chunk.css"
+    "revision": "991fc6b586fc384c20fa",
+    "url": "/react-quagga-example/static/css/main.c37c1087.chunk.css"
   },
   {
     "revision": "a611e76b1a39762ed992",
     "url": "/react-quagga-example/static/js/2.05e2634d.chunk.js"
   },
   {
-    "revision": "89b63d93d7dbe66ec22a",
+    "revision": "991fc6b586fc384c20fa",
     "url": "/react-quagga-example/static/js/main.89968960.chunk.js"
   },
   {

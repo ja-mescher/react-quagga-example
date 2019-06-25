@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-quagga-example/static/css/main.677b4c2f.chunk.css",
+    "main.css": "/react-quagga-example/static/css/main.c37c1087.chunk.css",
     "main.js": "/react-quagga-example/static/js/main.89968960.chunk.js",
     "main.js.map": "/react-quagga-example/static/js/main.89968960.chunk.js.map",
     "runtime~main.js": "/react-quagga-example/static/js/runtime~main.78c23c62.js",
@@ -8,8 +8,8 @@
     "static/js/2.05e2634d.chunk.js": "/react-quagga-example/static/js/2.05e2634d.chunk.js",
     "static/js/2.05e2634d.chunk.js.map": "/react-quagga-example/static/js/2.05e2634d.chunk.js.map",
     "index.html": "/react-quagga-example/index.html",
-    "precache-manifest.62331df5b36ae6a1cc40d2327ff5b9f8.js": "/react-quagga-example/precache-manifest.62331df5b36ae6a1cc40d2327ff5b9f8.js",
+    "precache-manifest.e992ff7961122a416c18ccea54f39db4.js": "/react-quagga-example/precache-manifest.e992ff7961122a416c18ccea54f39db4.js",
     "service-worker.js": "/react-quagga-example/service-worker.js",
-    "static/css/main.677b4c2f.chunk.css.map": "/react-quagga-example/static/css/main.677b4c2f.chunk.css.map"
+    "static/css/main.c37c1087.chunk.css.map": "/react-quagga-example/static/css/main.c37c1087.chunk.css.map"
   }
 }
