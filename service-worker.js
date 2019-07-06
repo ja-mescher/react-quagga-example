@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-quagga-example/precache-manifest.09f7b6c218e0abed1ed983df51450f1b.js"
+  "/react-quagga-example/precache-manifest.fe5ce6a057efb3ec11f76a43c4a3724f.js"
 );
 
 self.addEventListener('message', (event) => {
