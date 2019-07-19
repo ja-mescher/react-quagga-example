@@ -41,7 +41,6 @@ export const DEFAULT_CONFIG = {
     width: 1920,
     height: 1080,
     facingMode: "environment",
-    aspectRatio: {min: 1, max: 1},
   },
   area: { // defines rectangle of the detection/localization area
     top: "0%",    // top offset
@@ -65,7 +64,7 @@ export const DEFAULT_CONFIG = {
   },
   numOfWorkers: navigator.hardwareConcurrency || 4,
   frequency: 5,
-  locate: true,
+  locate: false,
   locator: {
     patchSize: "medium",
     halfSample: true
