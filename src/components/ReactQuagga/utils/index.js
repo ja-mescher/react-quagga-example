@@ -65,7 +65,7 @@ export const DEFAULT_CONFIG = {
   },
   numOfWorkers: navigator.hardwareConcurrency || 4,
   frequency: 5,
-  locate: true,
+  locate: false,
   locator: {
     patchSize: "medium",
     halfSample: true
