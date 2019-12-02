@@ -28,6 +28,7 @@ export const useQuagga = () => {
   useEffect(() => {
     getVideoDevices()
       .then(devices => setScannerSupported(devices.length > 0))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return scannerSupported
@@ -41,7 +42,6 @@ export const DEFAULT_CONFIG = {
     width: 1920,
     height: 1080,
     facingMode: "environment",
-    aspectRatio: {min: 1, max: 1},
   },
   area: { // defines rectangle of the detection/localization area
     top: "0%",    // top offset
